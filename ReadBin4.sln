@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadBin4", "ReadBin4.csproj", "{B4A8E83D-5CD5-44EB-BE52-6042CC0A7781}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4A8E83D-5CD5-44EB-BE52-6042CC0A7781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A8E83D-5CD5-44EB-BE52-6042CC0A7781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A8E83D-5CD5-44EB-BE52-6042CC0A7781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A8E83D-5CD5-44EB-BE52-6042CC0A7781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F1A51C1-7F04-445B-8E72-76DFEF034544}
+	EndGlobalSection
+EndGlobal
