@@ -91,5 +91,21 @@ namespace ReadBin4 {
         public void SetProgressBar(int percent) {
             progressBar1.Value = percent;
         }
+
+        private void yeetToTextButton_Click(object sender, EventArgs e) {
+            string yeetFile = "";
+            string txtFile = "";
+            SetProgressBar(0);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                yeetFile = openFileDialog.FileName;
+            }
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                txtFile = saveFileDialog.FileName;
+            }
+            AreaFileManager.WriteTextFile(yeetFile, txtFile);
+            SetProgressBar(100);
+        }
     }
 }

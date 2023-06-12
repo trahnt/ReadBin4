@@ -72,14 +72,6 @@
             return areaArray;
         }
 
-        private static string SliceString(string s, int start, int stopExclusive) {
-            string result = "";
-            for (int i = start; i < stopExclusive; i++) {
-                result += s[i];
-            }
-            return result;
-        }
-
         private static string[] CopyToStringArray(List<string> stuff) {
             string[] s = new string[stuff.Count];
             for (int i = 0; i < stuff.Count; i++) {
@@ -100,6 +92,33 @@
                 list2.Add(pattern);
             }
             return list2;
+        }
+
+        public static void WriteTextFile(string yeetFile, string txtFile) {
+            Area[] areas = ReadFile(yeetFile);
+            StreamWriter sw = new StreamWriter(txtFile);
+            int colStart, rowStart, colNumber, rowNumber, colJump, rowJump, colEnd, rowEnd;
+            foreach (Area area in areas) {
+                foreach (Pattern pattern in area.patterns) {
+                    colJump = pattern.columns;
+                    rowJump = pattern.rows;
+                    for (int r = 0; r < pattern.rows; r++) {
+                        rowStart = area.coordinates[1] + r;
+                        rowEnd = area.coordinates[3] - pattern.rows + r + 1;
+                        for (int c = 0; c < pattern.columns; c++) {
+                            string s = pattern.pattern[r * pattern.columns + c];
+                            if (s == "N")
+                                continue;
+                            colStart = area.coordinates[0] + c;
+                            colEnd = area.coordinates[2] - pattern.columns + c + 1;
+                            colNumber = (area.coordinates[2] - area.coordinates[0]) / 2 + 1;
+                            rowNumber = (area.coordinates[3] - area.coordinates[1]) / 2 + 1;
+                            sw.WriteLine($"{area.name}_{s},{colStart},{rowStart},{colNumber},{rowNumber},{colJump},{rowJump},{colEnd},{rowEnd}");
+                        }
+                    }
+                }
+            }
+            sw.Close();
         }
     }
 }

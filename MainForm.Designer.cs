@@ -29,6 +29,7 @@
             this.readBinButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.processingLabel = new System.Windows.Forms.Label();
+            this.yeetToTextButton = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,11 +87,22 @@
             this.processingLabel.Size = new System.Drawing.Size(0, 25);
             this.processingLabel.TabIndex = 9;
             // 
+            // yeetToTextButton
+            // 
+            this.yeetToTextButton.Location = new System.Drawing.Point(534, 110);
+            this.yeetToTextButton.Name = "yeetToTextButton";
+            this.yeetToTextButton.Size = new System.Drawing.Size(168, 41);
+            this.yeetToTextButton.TabIndex = 10;
+            this.yeetToTextButton.Text = "Convert yeet to txt";
+            this.yeetToTextButton.UseVisualStyleBackColor = true;
+            this.yeetToTextButton.Click += new System.EventHandler(this.yeetToTextButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.yeetToTextButton);
             this.Controls.Add(this.processingLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.readBinButton);
@@ -112,5 +124,6 @@
         private Button readBinButton;
         private ProgressBar progressBar1;
         private Label processingLabel;
+        private Button yeetToTextButton;
     }
 }
