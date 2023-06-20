@@ -111,8 +111,8 @@
                                 continue;
                             colStart = area.coordinates[0] + c;
                             colEnd = area.coordinates[2] - pattern.columns + c + 1;
-                            colNumber = (area.coordinates[2] - area.coordinates[0]) / 2 + 1;
-                            rowNumber = (area.coordinates[3] - area.coordinates[1]) / 2 + 1;
+                            colNumber = (area.coordinates[2] - area.coordinates[0]) / pattern.columns + 1;
+                            rowNumber = (area.coordinates[3] - area.coordinates[1]) / pattern.rows + 1;
                             sw.WriteLine($"{area.name}_{s},{colStart},{rowStart},{colNumber},{rowNumber},{colJump},{rowJump},{colEnd},{rowEnd}");
                         }
                     }
